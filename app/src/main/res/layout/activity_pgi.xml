@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormRegisterStudy.PgiActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/btn_back_pgi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/back_svgrepo_com" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/kantumruy2"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="ត្រឡប់ក្រោយ"
+                    android:textColor="@color/color_app"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="ពាក្យចុះឈ្មោះចូលរៀន"
+                android:gravity="center"
+                android:textColor="@color/color_app"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="ព័ត៌មានមាតាបិតា ឬ អាណាព្យាបាល"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+
+                />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:text="ឈ្មោះឪពុក"
+                />
+
+            <EditText
+                android:id="@+id/edit_father_name"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:ems="10"
+                android:hint="ឈ្មោះឪពុក"
+                android:textColor="@color/color_app"
+                android:inputType="text" />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:text="ការងារឪពុក"
+                />
+
+            <EditText
+                android:id="@+id/edit_father_job"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:ems="10"
+                android:hint="ការងារឪពុក"
+                android:textColor="@color/color_app"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="ឪពុកនៅរស់ ?"
+                android:textColor="@color/color_app"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+            <RadioGroup
+                android:id="@+id/group_Father_Alive"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                <RadioButton
+                    android:id="@+id/btn_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:checked="true"
+                    android:padding="10dp"
+                    android:text="បាទ"
+                    android:fontFamily="@font/kantumruy2"
+                    android:textSize="20dp"
+                    android:textColor="@color/color_app"
+                    app:layout_constraintStart_toEndOf="@+id/usd_radio_button"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+                <RadioButton
+                    android:id="@+id/btn_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:checked="false"
+                    android:padding="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="ទេ"
+                    android:textSize="20dp"
+                    android:textColor="@color/color_app"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:text="ឈ្មោះម្តាយ"
+                />
+
+            <EditText
+                android:id="@+id/edit_mother_name"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:ems="10"
+                android:hint="ឈ្មោះម្តាយ"
+                android:textColor="@color/color_app"
+                android:inputType="text" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:text="ការងារឪពុក"
+                />
+
+            <EditText
+                android:id="@+id/edit_mother_job"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:ems="10"
+                android:hint="ការងារឪពុក"
+                android:textColor="@color/color_app"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="ឪពុកនៅរស់ ?"
+                android:textColor="@color/color_app"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+            <RadioGroup
+                android:id="@+id/group_Mother_Alive"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+                <RadioButton
+                    android:id="@+id/btn_yes_mom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:checked="true"
+                    android:padding="10dp"
+                    android:text="បាទ"
+                    android:fontFamily="@font/kantumruy2"
+                    android:textSize="20dp"
+                    android:textColor="@color/color_app"
+                    app:layout_constraintStart_toEndOf="@+id/usd_radio_button"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+                <RadioButton
+                    android:id="@+id/btn_no_mom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:checked="false"
+                    android:padding="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="ទេ"
+                    android:textSize="20dp"
+                    android:textColor="@color/color_app"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15dp"
+                android:textColor="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:text="លេខទូរស័ព្ទអាណាព្យាបាល"
+                />
+
+            <EditText
+                android:id="@+id/edit_phune_number"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="លេខទូរស័ព្ទអាណាព្យាបាល"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/color_app" />
+
+            <Button
+                android:id="@+id/btn_next_pgi"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/color_app"
+                android:textColor="@color/white"
+                android:fontFamily="@font/kantumruy2"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="បន្ទាប់" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

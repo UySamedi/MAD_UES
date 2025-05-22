@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register.signupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/fe_logo" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fe"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textStyle="bold"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/name"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/color_app"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/name"
+            android:contentDescription="@string/name" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/email"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/color_app"
+            android:padding="10dp"
+            android:background="@drawable/edit_text"
+            android:hint="@string/email"
+            android:contentDescription="@string/email" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/password"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/edit_text"
+            android:ems="10"
+            android:padding="10dp"
+            android:textColor="@color/color_app"
+            android:inputType="textPassword"
+            android:hint="@string/password"
+            android:contentDescription="@string/password" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/comfirm_password"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/edit_comfirm_password"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/edit_text"
+            android:ems="10"
+            android:padding="10dp"
+            android:textColor="@color/color_app"
+            android:inputType="textPassword"
+            android:hint="@string/comfirm_password"
+            android:contentDescription="@string/comfirm_password" />
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/btn_signup"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/color_app"
+            android:fontFamily="@font/kantumruy2"
+            android:text="បង្កើតគណនី"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:contentDescription="ប៊ូតុងបង្កើតគណនី" />
+
+        <!-- Login TextView (Clickable and Accessible) -->
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="ខ្ញុំមានគណនីមួយ។ ចូលគណនី"
+            android:textColor="@color/color_app"
+            android:textSize="15dp"
+            android:fontFamily="@font/kantumruy2"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="ចុចដើម្បីចូលគណនី"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
