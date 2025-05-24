@@ -1,9 +1,13 @@
 <resources>
-    <string name="app_name">uesApp</string>
+    <!-- App name, non-translatable as per Android best practices -->
+    <string name="app_name" translatable="false">FE APP</string>
+
+    <!-- Login screen strings, translatable for potential localization -->
     <string name="email">អ៊ីមែល</string>
     <string name="fe">មហាវិទ្យាល័យវិស្វកម្ម</string>
     <string name="name">ឈ្មោះ</string>
     <string name="password">លេខសម្ងាត់</string>
-    <string name="comfirm_password">បញ្ចាក់លេខសម្ងាត់</string>
+    <string name="confirm_password">បញ្ចាក់លេខសម្ងាត់</string>
     <string name="Login">ចូលគណនី</string>
+
 </resources>

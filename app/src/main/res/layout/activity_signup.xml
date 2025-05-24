@@ -16,6 +16,7 @@
             android:id="@+id/imageView3"
             android:layout_width="250dp"
             android:layout_height="150dp"
+            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/fe_logo" />
 
@@ -109,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:text="@string/comfirm_password"
+            android:text="@string/confirm_password"
             android:fontFamily="@font/kantumruy2"
             android:textColor="@color/color_app"
             android:textSize="20dp" />
@@ -124,8 +125,8 @@
             android:padding="10dp"
             android:textColor="@color/color_app"
             android:inputType="textPassword"
-            android:hint="@string/comfirm_password"
-            android:contentDescription="@string/comfirm_password" />
+            android:hint="@string/confirm_password"
+            android:contentDescription="@string/confirm_password" />
 
         <!-- Sign Up Button -->
         <Button

@@ -11,11 +11,14 @@ import androidx.cardview.widget.CardView;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.example.uesapp.Departments.BIOActivity;
+import com.example.uesapp.Departments.DEEActivity;
+import com.example.uesapp.Departments.ITEActivity;
+import com.example.uesapp.Departments.SCAActivity;
+import com.example.uesapp.Departments.TEEActivity;
 import com.example.uesapp.R;
 
 import java.util.ArrayList;
-
-//import com.example.my_app.Departments.ITEActivity;
 
 public class HomeFragment extends Fragment {
 
@@ -32,6 +35,38 @@ public class HomeFragment extends Fragment {
         slideModels.add(new SlideModel(R.drawable.fe_poster3, ScaleTypes.FIT));
         imageSlider.setImageList(slideModels, ScaleTypes.FIT);
 
+        // Find CardViews
+        CardView scaCard = view.findViewById(R.id.scaCard);
+        CardView iteCard = view.findViewById(R.id.iteCard);
+        CardView bioCard = view.findViewById(R.id.bioCard);
+        CardView teeCard = view.findViewById(R.id.teeCard);
+        CardView deeCard = view.findViewById(R.id.deeCard);
+
+        // Set click listeners for each CardView
+        scaCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), SCAActivity.class);
+            startActivity(intent);
+        });
+
+        iteCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), ITEActivity.class);
+            startActivity(intent);
+        });
+
+        bioCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), BIOActivity.class);
+            startActivity(intent);
+        });
+
+        teeCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), TEEActivity.class);
+            startActivity(intent);
+        });
+
+        deeCard.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), DEEActivity.class);
+            startActivity(intent);
+        });
 
         return view;
     }

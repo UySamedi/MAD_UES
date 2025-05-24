@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Departments.SCAActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/btn_back_sca"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                app:srcCompat="@drawable/back_svgrepo_com" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/kantumruy2"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="ត្រឡប់ក្រោយ"
+                android:textColor="@color/color_app"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Automation Supply Chain Systems
+            (SCA)"
+            android:textSize="20dp"
+            android:textColor="@color/color_app"
+            android:fontFamily="@font/kantumruy2"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="ប្រព័ន្ធ​ស្វ័យ​ប្រវត្តិ និង​សង្វាក់​ផ្គត់ផ្គង់"
+            android:textSize="15dp"
+            android:textColor="@color/color_app"
+            android:fontFamily="@font/kantumruy2"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="Introduction to Degree"
+            android:textSize="15dp"
+            android:textColor="@color/color_app"
+            android:fontFamily="@font/kantumruy2"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/textView34"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto2"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/color_app"
+            android:textSize="15dp"
+
+            />
+
+        <Button
+            android:id="@+id/btn_view_more_EE"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/color_app"
+            android:text="មើលបន្ងែម" />
+        <Button
+            android:id="@+id/btn_register_std"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/color_app"
+            android:text="ធ្វើការចុះចូលរៀន" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

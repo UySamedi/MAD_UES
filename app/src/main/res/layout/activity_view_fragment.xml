@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,69 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.ViewFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/fe_logo" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/fe"
+            android:fontFamily="@font/kantumruy2"
+            android:textColor="@color/color_app"
+            android:textStyle="bold"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/view_name"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/color_app"
+            android:layout_marginTop="10dp"
+            android:text="មើលការចុះឈ្មោះរបស់អ្នក"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:fontFamily="@font/kantumruy2"
+            />
+        <Button
+            android:id="@+id/view_all_name"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/color_app"
+            android:layout_marginTop="10dp"
+            android:text="មើលការចុះឈ្មោះទាំងអស់ដែលបានចុះឈ្មោះ"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:fontFamily="@font/kantumruy2"
+            />
+        <Button
+            android:id="@+id/view_pass_exam"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/color_app"
+            android:layout_marginTop="10dp"
+            android:text="មើលលទ្ធផលនៃការប្រឡង"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:fontFamily="@font/kantumruy2"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>
