@@ -10,9 +10,10 @@ import androidx.core.view.WindowInsetsCompat;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.uesapp.FormRegisterStudy.SiActivity;
 import com.example.uesapp.R;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ITEActivity extends AppCompatActivity {
 
@@ -29,24 +30,40 @@ public class ITEActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Find the back button ImageView
+        // Find the TextView
+        TextView textIntroduction = findViewById(R.id.text_ite_introduction);
+
+        // Example API response (replace with actual API call)
+        String jsonResponse = "{\n" +
+                "  \"message\": \"Departments Retrieved successfully!\",\n" +
+                "  \"department\": {\n" +
+                "    \"id\": 1,\n" +
+                "    \"name\": \"Information Technology Engineering\",\n" +
+                "    \"description\": \"The Bachelor of Information Technology Engineering program at the Faculty of Engineering, Royal University of Phnom Penh provides comprehensive, hands-on training in IT, combining theoretical and practical learning. It prepares students for tech industries through coursework in computer software, networks, and advanced topics like AI and mobile development, along with mandatory practicums and internships to build real-world experience and skills.\"\n" +
+                "  }\n" +
+                "}";
+
+        try {
+            // Parse JSON response
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+            JSONObject department = jsonObject.getJSONObject("department");
+            String description = department.getString("description");
+
+            // Set the description to the TextView
+            textIntroduction.setText(description);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            textIntroduction.setText("Failed to load description.");
+        }
+
+        // Find and set click listeners for back buttons and register button (unchanged)
         ImageView btnBack = findViewById(R.id.btn_back_ite);
-        // Find the back TextView
         TextView textBack = findViewById(R.id.textView11);
-        // Find the register button
         Button btnRegister = findViewById(R.id.btn_register_std);
 
-        // Set click listener for back button ImageView
-        btnBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
-        });
+        btnBack.setOnClickListener(v -> finish());
+        textBack.setOnClickListener(v -> finish());
 
-        // Set click listener for back TextView
-        textBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
-        });
-
-        // Set click listener for register button to navigate to SiActivity
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(ITEActivity.this, SiActivity.class);
             startActivity(intent);

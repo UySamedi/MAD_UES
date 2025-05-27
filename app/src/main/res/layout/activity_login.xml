@@ -5,122 +5,133 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Register.LoginActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="250dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/fe_logo" />
+            app:srcCompat="@drawable/fe_logo"
+            android:contentDescription="@string/app_logo_description" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/fe"
             android:fontFamily="@font/kantumruy2"
             android:textColor="@color/color_app"
             android:textStyle="bold"
-            android:textSize="25dp"
-            />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
             android:text="@string/email"
             android:fontFamily="@font/kantumruy2"
             android:textColor="@color/color_app"
-            android:textSize="20dp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edit_email_login"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@color/color_app"
             android:padding="10dp"
             android:background="@drawable/edit_text"
-            android:hint="@string/email" />
+            android:hint="@string/email"
+            android:contentDescription="@string/email" />
 
         <TextView
             android:id="@+id/textView6"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
             android:text="@string/password"
             android:fontFamily="@font/kantumruy2"
             android:textColor="@color/color_app"
-            android:textSize="20dp"
-            />
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/edit_password_login"
-            android:layout_width="360dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/edit_text"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
             android:ems="10"
             android:padding="10dp"
             android:textColor="@color/color_app"
+            android:background="@drawable/edit_text"
             android:inputType="textPassword"
             android:hint="@string/password"
-            />
+            android:contentDescription="@string/password" />
+
         <TextView
             android:id="@+id/forgot_password_text"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="end"
+            android:layout_gravity="end"
             android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            android:text="ភ្លេចពាក្យសម្ងាត់?"
+            android:text="@string/forgot_password"
             android:textColor="@color/color_app"
-            android:textSize="15dp"
-            android:fontFamily="@font/kantumruy2" />
+            android:textSize="14sp"
+            android:fontFamily="@font/kantumruy2"
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/forgot_password_description" />
 
         <Button
             android:id="@+id/btn_login"
             android:layout_width="150dp"
-            android:layout_height="60dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="@color/color_app"
-            android:text="@string/Login"
-            android:textSize="15dp"
             android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
+            android:text="@string/Login"
             android:textColor="@color/white"
-            />
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:contentDescription="@string/login_button_description" />
 
         <TextView
-            android:id="@+id/singupText"
-            android:layout_width="match_parent"
+            android:id="@+id/signupText"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="មិនមានគណនី? បង្កើតគណនី"
+            android:text="@string/signup_prompt"
             android:textColor="@color/color_app"
-            android:textSize="15dp"
+            android:textSize="14sp"
             android:fontFamily="@font/kantumruy2"
-            />
-
+            android:clickable="true"
+            android:focusable="true"
+            android:contentDescription="@string/signup_prompt_description"
+            android:padding="12dp" />
 
     </LinearLayout>
 

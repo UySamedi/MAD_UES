@@ -26,7 +26,7 @@ public class SchoolinformationActivity extends AppCompatActivity {
         });
 
         // Handle btn_next_school_infor
-        Button btnNextSchoolInfor = findViewById(R.id.btn_next_school_infor);
+        Button btnNextSchoolInfor = findViewById(R.id.btn_next_school_info);
         btnNextSchoolInfor.setOnClickListener(v -> {
             Intent intent = new Intent(SchoolinformationActivity.this, UploadActivity.class);
             startActivity(intent);

@@ -5,255 +5,274 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FormRegisterStudy.SiActivity">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-            <ImageView
-                android:id="@+id/btn_back"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                app:srcCompat="@drawable/back_svgrepo_com" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <TextView
-                android:id="@+id/textView11"
+            <LinearLayout
+                android:id="@+id/back_button_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/kantumruy2"
-                android:gravity="center"
-                android:layout_marginStart="10dp"
-                android:text="ត្រឡប់ក្រោយ"
-                android:textColor="@color/color_app"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/back_button_description"
+                android:padding="8dp">
 
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/back_svgrepo_com" />
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:gravity="center"
+                    android:text="@string/back"
+                    android:textColor="@color/color_app"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kantumruy2"
-                android:text="ពាក្យចុះឈ្មោះចូលរៀន"
                 android:gravity="center"
+                android:text="@string/registration_title"
                 android:textColor="@color/color_app"
-                android:textSize="20dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="ព័ត៌មានរបស់សិស្ស"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-
-            />
-
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:text="នាមត្រកូល"
-            />
-
-        <EditText
-            android:id="@+id/edit_first_name"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/edit_text"
-            android:padding="10dp"
-            android:ems="10"
-            android:hint="នាមត្រកូល"
-            android:textColor="@color/color_app"
-            android:inputType="text" />
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:text="នាមខ្លួន"
-            />
-
-        <EditText
-            android:id="@+id/edit_last_name"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/edit_text"
-            android:padding="10dp"
-            android:ems="10"
-            android:hint="នាមខ្លួន"
-            android:textColor="@color/color_app"
-            android:inputType="text" />
-
-        <TextView
-            android:id="@+id/textView14"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="25dp"
-            android:fontFamily="@font/kantumruy2"
-            android:text="ភេទ"
-            android:textColor="@color/color_app"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            />
-
-        <RadioGroup
-            android:id="@+id/gender_group_si"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11">
-
-            <RadioButton
-                android:id="@+id/mele_button"
+            <TextView
+                android:id="@+id/textView10"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginStart="12dp"
-                android:checked="true"
-                android:padding="10dp"
-                android:text="ស្រី"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textSize="20dp"
+                android:gravity="center"
+                android:text="@string/student_info"
                 android:textColor="@color/color_app"
-                app:layout_constraintStart_toEndOf="@+id/usd_radio_button"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/femele_button"
+            <TextView
+                android:id="@+id/textView12"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_marginStart="36dp"
-                android:checked="false"
-                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:text="ប្រុស"
-                android:textSize="20dp"
+                android:text="@string/first_name"
                 android:textColor="@color/color_app"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText" />
-        </RadioGroup>
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:text="ថ្ងៃ-ខែ-ឆ្នាំកំណើត"
-            />
+            <EditText
+                android:id="@+id/edit_first_name"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/first_name_description" />
 
-        <EditText
-            android:id="@+id/edit_dob"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:ems="10"
-            android:background="@drawable/edit_text"
-            android:padding="10dp"
-            android:hint="ថ្ងៃ-ខែ-ឆ្នាំកំណើត"
-            android:inputType="date"
-            android:textColor="@color/color_app"
-            />
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:text="ទីកន្លែងកំណើត"
-            />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/last_name"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edit_pob"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/edit_text"
-            android:padding="10dp"
-            android:ems="10"
-            android:hint="ទីកន្លែងកំណើត"
-            android:textColor="@color/color_app"
-            android:inputType="text" />
+            <EditText
+                android:id="@+id/edit_last_name"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/last_name_description" />
 
-        <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:text="កំរិតសិក្សា"
-            />
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/gender"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edit_educantion"
-            android:layout_width="350dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:background="@drawable/edit_text"
-            android:padding="10dp"
-            android:ems="10"
-            android:hint="កំរិតសិក្សា"
-            android:textColor="@color/color_app"
-            android:inputType="text" />
+            <RadioGroup
+                android:id="@+id/gender_group_si"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn_next_si"
-            android:layout_width="120dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/color_app"
-            android:textColor="@color/white"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:text="បន្ទាប់" />
+                <RadioButton
+                    android:id="@+id/female_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:checked="true"
+                    android:fontFamily="@font/kantumruy2"
+                    android:padding="8dp"
+                    android:text="@string/female"
+                    android:textColor="@color/color_app"
+                    android:textSize="16sp"
+                    android:contentDescription="@string/female_description" />
 
-    </LinearLayout>
+                <RadioButton
+                    android:id="@+id/male_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:checked="false"
+                    android:fontFamily="@font/kantumruy2"
+                    android:padding="8dp"
+                    android:text="@string/male"
+                    android:textColor="@color/color_app"
+                    android:textSize="16sp"
+                    android:contentDescription="@string/male_description" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/date_of_birth"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_dob"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/date_of_birth"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/date_of_birth_description"
+                android:focusable="false"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/place_of_birth"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_pob"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/place_of_birth"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/place_of_birth_description" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/education_level"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_education"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/education_level"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/education_level_description" />
+
+            <Button
+                android:id="@+id/btn_next_si"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:contentDescription="@string/next_button_description" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

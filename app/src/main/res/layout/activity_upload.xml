@@ -5,194 +5,219 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FormRegisterStudy.UploadActivity">
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-            <ImageView
-                android:id="@+id/btn_back_upload"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginStart="15dp"
-                app:srcCompat="@drawable/back_svgrepo_com" />
+            <LinearLayout
+                android:id="@+id/back_button_layout_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/back_button_description"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/btn_back_upload"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    app:srcCompat="@drawable/back_svgrepo_com" />
+
+                <TextView
+                    android:id="@+id/textView_back_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:gravity="center"
+                    android:text="@string/back"
+                    android:textColor="@color/color_app"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textView11"
+                android:id="@+id/textView_title_upload"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kantumruy2"
                 android:gravity="center"
-                android:text="ត្រឡប់ក្រោយ"
+                android:text="@string/registration_title"
                 android:textColor="@color/color_app"
-                android:textSize="15dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:fontFamily="@font/kantumruy2"
-            android:text="ពាក្យចុះឈ្មោះចូលរៀន"
-            android:gravity="center"
-            android:textColor="@color/color_app"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="ព័ត៌មានប្រវត្តិរូបជារូបភាព"
-            android:fontFamily="@font/kantumruy2"
-            android:textStyle="bold"
-            android:textSize="15dp"
-            android:textColor="@color/color_app"
-            />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView18"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:text="រូបថតសមីខ្លួន 4x6 និង 3x4"
-                android:textSize="15dp"
+                android:id="@+id/textView_subtitle_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/kantumruy2"
+                android:gravity="center"
+                android:text="@string/photo_info"
                 android:textColor="@color/color_app"
-                android:textStyle="bold"
-                android:fontFamily="@font/kantumruy2"
-                />
-            <TextView
-                android:id="@+id/textView27"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:text="រូបថតចំពីមុខគ្មានពាក់វ៉ែនតា ផ្ទៃពណ៌ខៀវ"
-                android:textSize="15dp"
-                android:textColor="@color/color_text"
-                android:fontFamily="@font/kantumruy2"
-                />
-            <TextView
-                android:id="@+id/textView28"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:text="(ប្រុសអាវធំ ស្រីអាវសឫអាវប៉ាក់)"
-                android:textSize="15dp"
-                android:textColor="@color/color_text"
-                android:fontFamily="@font/kantumruy2"
-                />
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_photo_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/photo_size"
+                    android:textColor="@color/color_app"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_photo_requirements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/photo_requirements"
+                    android:textColor="@color/color_text"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView_photo_dress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/photo_dress"
+                    android:textColor="@color/color_text"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_upload_photo"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_app"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/upload_photo"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:contentDescription="@string/upload_photo_description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_diploma_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/diploma"
+                    android:textColor="@color/color_app"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView_diploma_requirements"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/diploma_requirements"
+                    android:textColor="@color/color_text"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_upload_diploma"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/color_app"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/upload_diploma"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:contentDescription="@string/upload_diploma_description" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_major_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kantumruy2"
+                    android:text="@string/select_major"
+                    android:textColor="@color/color_app"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_major"
+                    android:layout_width="300dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_text"
+                    android:contentDescription="@string/select_major_description"
+                    android:prompt="@string/select_major" />
+            </LinearLayout>
 
             <Button
-                android:id="@+id/btn_img1"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
+                android:id="@+id/btn_submit"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="@color/color_app"
+                android:fontFamily="@font/kantumruy2"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="@color/white"
-                android:fontFamily="@font/kantumruy2"
-                android:text="ចុះដើម្បីដាក់រូបភាព" />
+                android:contentDescription="@string/submit_button_description" />
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView26"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/kantumruy2"
-                android:text="រូបសញ្ញាបត្រមធ្យមសិក្សាទុតិយភួមិ"
-                android:textColor="@color/color_app"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView29"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/kantumruy2"
-                android:text="សញ្ញាបត្រត្រូវមានការបញ្ជាក់ពីសាលាស្រុក/ខណ្ឌ"
-                android:textColor="@color/color_text"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btn_img2"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_gravity="center"
-                android:backgroundTint="@color/color_app"
-                android:fontFamily="@font/kantumruy2"
-                android:text="ចុះដើម្បីដាក់រូបភាព"
-                android:textColor="@color/white"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/textView30"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginStart="20dp"
-                android:fontFamily="@font/kantumruy2"
-                android:text="ជ្រើសរើសមុខជំនាញ"
-                android:textColor="@color/color_app"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp" />
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_submit"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:backgroundTint="@color/color_app"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:fontFamily="@font/kantumruy2"
-            android:text="ដាក់ស្នើ" />
-
-
-    </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

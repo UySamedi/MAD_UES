@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
         editEmail = findViewById(R.id.edit_email_login);
         editPassword = findViewById(R.id.edit_password_login);
         btnLogin = findViewById(R.id.btn_login);
-        textRegister = findViewById(R.id.singupText);
+        textRegister = findViewById(R.id.signupText);
         textForgotPassword = findViewById(R.id.forgot_password_text); // Fixed ID to match XML
     }
 

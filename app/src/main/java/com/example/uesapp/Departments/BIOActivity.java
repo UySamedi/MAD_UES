@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.uesapp.FormRegisterStudy.SiActivity;
 import com.example.uesapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class BIOActivity extends AppCompatActivity {
 
     @Override
@@ -29,6 +32,32 @@ public class BIOActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        // Find the TextView
+        TextView textIntroduction = findViewById(R.id.text_bio_introduction);
+
+        // Example API response (replace with actual API call)
+        String jsonResponse = "{\n" +
+                "  \"message\": \"Departments Retrieved successfully!\",\n" +
+                "  \"department\": {\n" +
+                "    \"id\": 4,\n" +
+                "    \"name\": \"Bio-Engineering\",\n" +
+                "    \"description\": \"The Bio-Engineering/Biotechnology program is designed to equip students with foundational knowledge in biological and chemical processes across various fields such as medicine, food, agriculture, and the environment, while also fostering skills in communication, teamwork, leadership, and entrepreneurship for successful careers in industry and research\"\n" +
+                "  }\n" +
+                "}";
+
+        try {
+            // Parse JSON response
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+            JSONObject department = jsonObject.getJSONObject("department");
+            String description = department.getString("description");
+
+            // Set the description to the TextView
+            textIntroduction.setText(description);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            textIntroduction.setText("Failed to load description.");
+        }
 
         // Find the back button ImageView
         ImageView btnBack = findViewById(R.id.btn_back_bio);

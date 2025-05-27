@@ -5,274 +5,272 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Fragment.HomeFragment">
 
-
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
-
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/fe_logo" />
+                android:src="@drawable/fe_logo"
+                android:contentDescription="@string/app_logo_description" />
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="100dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_weight="1"
                 android:fontFamily="@font/kantumruy2"
                 android:gravity="center"
                 android:text="@string/fe"
                 android:textColor="@color/color_app"
-                android:textSize="25dp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="240dp"
-            android:orientation="vertical">
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
-                android:layout_width="370dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="20dp"
-                android:layout_gravity="center"
-                android:gravity="center"
-                app:cardCornerRadius="30dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-                <com.denzcoskun.imageslider.ImageSlider
-                    android:id="@+id/image_Slider"
-                    android:layout_width="match_parent"
-                    android:layout_height="180dp"
-                    app:iss_auto_cycle="true"
-                    app:iss_delay="3000"
-                    app:iss_period="3000" />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="350dp"
-            android:layout_height="290dp"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="320dp"
+            android:layout_height="180dp"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <GridLayout
-                android:id="@+id/gridLayout"
-                android:layout_width="350dp"
-                android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="8dp">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/image_Slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:iss_auto_cycle="true"
+                app:iss_delay="3000"
+                app:iss_period="3000" />
+        </androidx.cardview.widget.CardView>
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:columnCount="3"
+            android:rowCount="2"
+            android:alignmentMode="alignMargins">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/scaCard"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_row="0"
+                android:layout_column="0"
                 android:layout_gravity="center"
-                android:columnCount="3"
-                android:rowCount="2"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView">
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:contentDescription="@string/sca_card_description">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/scaCard"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_row="0"
-                    android:layout_column="0"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/sca_image_logo"
+                        android:contentDescription="@string/sca_image_description" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/roboto2"
+                        android:text="@string/sca"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="15dp"
-                            android:gravity="center"
-                            android:src="@drawable/sca_image_logo" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iteCard"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:contentDescription="@string/ite_card_description">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="0dp"
-                            android:fontFamily="@font/roboto2"
-                            android:text="SCA"
-                            android:textAlignment="center"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ite_image_logo"
+                        android:contentDescription="@string/ite_image_description" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/iteCard"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_row="0"
-                    android:layout_column="1"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/roboto2"
+                        android:text="@string/ite"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"
-                            android:src="@drawable/ite_image_logo" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/bioCard"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:contentDescription="@string/bio_card_description">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/roboto2"
-                            android:text="ITE"
-                            android:textAlignment="center"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/bio_image_logo"
+                        android:contentDescription="@string/bio_image_description" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/bioCard"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_row="0"
-                    android:layout_column="2"
-                    android:layout_gravity="bottom"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/roboto2"
+                        android:text="@string/bio"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"
-                            android:src="@drawable/bio_image_logo" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/teeCard"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:contentDescription="@string/tee_card_description">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/roboto2"
-                            android:text="BIO"
-                            android:textAlignment="center"
-                            android:textSize="18dp"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/tee_image_logo"
+                        android:contentDescription="@string/tee_image_description" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/teeCard"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_row="1"
-                    android:layout_column="0"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
-
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/roboto2"
+                        android:text="@string/tee"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="10dp"
-                            android:src="@drawable/tee_image_logo" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deeCard"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                android:contentDescription="@string/ee_card_description">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/roboto2"
-                            android:text="TEE"
-                            android:textAlignment="center"
-                            android:textSize="18dp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/deeCard"
-                    android:layout_width="100dp"
-                    android:layout_height="120dp"
-                    android:layout_row="1"
-                    android:layout_column="1"
-                    android:layout_margin="8dp"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="10dp">
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/dee_image_logo"
+                        android:contentDescription="@string/ee_image_description" />
 
-                    <LinearLayout
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical|center_horizontal"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:fontFamily="@font/roboto2"
+                        android:text="@string/ee"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-                        <ImageView
-                            android:layout_width="100dp"
-                            android:layout_height="90dp"
-                            android:layout_marginTop="10dp"
-                            android:gravity="center"
-                            android:src="@drawable/dee_image_logo" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/roboto2"
-                            android:text="EE"
-                            android:textAlignment="center"
-                            android:textSize="18dp"
-                            android:textStyle="bold"
-
-                            />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
-        </LinearLayout>
-
+        </GridLayout>
 
     </LinearLayout>
+
 </RelativeLayout>

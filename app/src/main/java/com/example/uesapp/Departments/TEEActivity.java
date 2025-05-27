@@ -15,6 +15,9 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.uesapp.FormRegisterStudy.SiActivity;
 import com.example.uesapp.R;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class TEEActivity extends AppCompatActivity {
 
     @Override
@@ -29,6 +32,33 @@ public class TEEActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+
+        TextView textIntroduction = findViewById(R.id.text_tee_introduction);
+
+        // Example API response (replace with actual API call)
+        String jsonResponse = "{\n" +
+                "  \"message\": \"Departments Retrieved successfully!\",\n" +
+                "  \"department\": {\n" +
+                "    \"id\": 3,\n" +
+                "    \"name\": \"Telecommunication and Electronic Engineering\",\n" +
+                "    \"description\": \"The Telecommunication and Electronics Engineering program combines telecommunication and electronics technologies to educate students in designing communication systems and electronic devices. It prepares graduates with technical, research, leadership, and entrepreneurial skills for careers in various sectors such as telecom companies, media stations, transportation hubs, factories, and public or private institutions.\"\n" +
+                "  }\n" +
+                "}";
+
+        try {
+            // Parse JSON response
+            JSONObject jsonObject = new JSONObject(jsonResponse);
+            JSONObject department = jsonObject.getJSONObject("department");
+            String description = department.getString("description");
+
+            // Set the description to the TextView
+            textIntroduction.setText(description);
+        } catch (JSONException e) {
+            e.printStackTrace();
+            textIntroduction.setText("Failed to load description.");
+        } // Fix: Added closing brace for try-catch block
+
 
         // Find the back button ImageView
         ImageView btnBack = findViewById(R.id.btn_back_tee);

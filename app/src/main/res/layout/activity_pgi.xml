@@ -5,23 +5,31 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".FormRegisterStudy.PgiActivity">
-
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="20dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal">
+                android:id="@+id/back_button_layout_pgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:focusable="true"
+                android:contentDescription="@string/back_button_description"
+                android:padding="8dp">
 
                 <ImageView
                     android:id="@+id/btn_back_pgi"
@@ -34,280 +42,281 @@
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
                     android:fontFamily="@font/kantumruy2"
                     android:gravity="center"
-                    android:layout_marginStart="10dp"
-                    android:text="ត្រឡប់ក្រោយ"
+                    android:text="@string/back"
                     android:textColor="@color/color_app"
-                    android:textSize="15dp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
+
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:id="@+id/textView_title_pgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kantumruy2"
-                android:text="ពាក្យចុះឈ្មោះចូលរៀន"
                 android:gravity="center"
+                android:text="@string/registration_title"
                 android:textColor="@color/color_app"
-                android:textSize="20dp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/textView_subtitle_pgi"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="ព័ត៌មានមាតាបិតា ឬ អាណាព្យាបាល"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:textSize="15dp"
+                android:gravity="center"
+                android:text="@string/parent_info"
                 android:textColor="@color/color_app"
-
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/textView_father_name_label"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="25dp"
-                android:textSize="15dp"
-                android:textColor="@color/color_app"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:text="ឈ្មោះឪពុក"
-                />
+                android:text="@string/father_name"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edit_father_name"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/edit_text"
-                android:padding="10dp"
-                android:ems="10"
-                android:hint="ឈ្មោះឪពុក"
-                android:textColor="@color/color_app"
-                android:inputType="text" />
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="25dp"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:textSize="15dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/father_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
                 android:textColor="@color/color_app"
+                android:contentDescription="@string/father_name_description" />
+
+            <TextView
+                android:id="@+id/textView_father_job_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:text="ការងារឪពុក"
-                />
+                android:text="@string/father_job"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edit_father_job"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edit_text"
-                android:padding="10dp"
                 android:ems="10"
-                android:hint="ការងារឪពុក"
+                android:hint="@string/father_job"
+                android:inputType="text"
+                android:padding="10dp"
                 android:textColor="@color/color_app"
-                android:inputType="text" />
+                android:contentDescription="@string/father_job_description" />
 
             <TextView
-                android:id="@+id/textView21"
-                android:layout_width="match_parent"
+                android:id="@+id/textView_father_alive_label"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:text="ឪពុកនៅរស់ ?"
+                android:text="@string/father_alive"
                 android:textColor="@color/color_app"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioGroup
-                android:id="@+id/group_Father_Alive"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="20dp"
-
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11">
+                android:id="@+id/radio_group_father_alive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/btn_yes"
+                    android:id="@+id/radio_yes_father"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:checked="true"
-                    android:padding="10dp"
-                    android:text="បាទ"
                     android:fontFamily="@font/kantumruy2"
-                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:text="@string/yes"
                     android:textColor="@color/color_app"
-                    app:layout_constraintStart_toEndOf="@+id/usd_radio_button"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                    android:textSize="16sp"
+                    android:contentDescription="@string/yes_father_description" />
 
                 <RadioButton
-                    android:id="@+id/btn_no"
+                    android:id="@+id/radio_no_father"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:checked="false"
-                    android:padding="10dp"
                     android:fontFamily="@font/kantumruy2"
-                    android:text="ទេ"
-                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:text="@string/no"
                     android:textColor="@color/color_app"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                    android:textSize="16sp"
+                    android:contentDescription="@string/no_father_description" />
             </RadioGroup>
 
-
             <TextView
-                android:id="@+id/textView19"
+                android:id="@+id/textView_mother_name_label"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="25dp"
-                android:textSize="15dp"
-                android:textColor="@color/color_app"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:text="ឈ្មោះម្តាយ"
-                />
+                android:text="@string/mother_name"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edit_mother_name"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/edit_text"
-                android:padding="10dp"
-                android:ems="10"
-                android:hint="ឈ្មោះម្តាយ"
-                android:textColor="@color/color_app"
-                android:inputType="text" />
-            <TextView
-                android:id="@+id/textView20"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="25dp"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:textSize="15dp"
+                android:background="@drawable/edit_text"
+                android:ems="10"
+                android:hint="@string/mother_name"
+                android:inputType="textPersonName"
+                android:padding="10dp"
                 android:textColor="@color/color_app"
+                android:contentDescription="@string/mother_name_description" />
+
+            <TextView
+                android:id="@+id/textView_mother_job_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:text="ការងារឪពុក"
-                />
+                android:text="@string/mother_job"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/edit_mother_job"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edit_text"
-                android:padding="10dp"
                 android:ems="10"
-                android:hint="ការងារឪពុក"
+                android:hint="@string/mother_job"
+                android:inputType="text"
+                android:padding="10dp"
                 android:textColor="@color/color_app"
-                android:inputType="text" />
+                android:contentDescription="@string/mother_job_description" />
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="match_parent"
+                android:id="@+id/textView_mother_alive_label"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:text="ឪពុកនៅរស់ ?"
+                android:text="@string/mother_alive"
                 android:textColor="@color/color_app"
-                android:textSize="15dp"
-                android:textStyle="bold"
-                />
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <RadioGroup
-                android:id="@+id/group_Mother_Alive"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="20dp"
-
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11">
+                android:id="@+id/radio_group_mother_alive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:id="@+id/btn_yes_mom"
+                    android:id="@+id/radio_yes_mother"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
                     android:checked="true"
-                    android:padding="10dp"
-                    android:text="បាទ"
                     android:fontFamily="@font/kantumruy2"
-                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:text="@string/yes"
                     android:textColor="@color/color_app"
-                    app:layout_constraintStart_toEndOf="@+id/usd_radio_button"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                    android:textSize="16sp"
+                    android:contentDescription="@string/yes_mother_description" />
 
                 <RadioButton
-                    android:id="@+id/btn_no_mom"
+                    android:id="@+id/radio_no_mother"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     android:checked="false"
-                    android:padding="10dp"
                     android:fontFamily="@font/kantumruy2"
-                    android:text="ទេ"
-                    android:textSize="20dp"
+                    android:padding="8dp"
+                    android:text="@string/no"
                     android:textColor="@color/color_app"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                    android:textSize="16sp"
+                    android:contentDescription="@string/no_mother_description" />
             </RadioGroup>
 
             <TextView
-                android:id="@+id/textView22"
+                android:id="@+id/textView_phone_label"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="5dp"
-                android:textSize="15dp"
-                android:textColor="@color/color_app"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/kantumruy2"
-                android:textStyle="bold"
-                android:text="លេខទូរស័ព្ទអាណាព្យាបាល"
-                />
+                android:text="@string/guardian_phone"
+                android:textColor="@color/color_app"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/edit_phune_number"
-                android:layout_width="350dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="20dp"
+                android:id="@+id/edit_phone_number"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/edit_text"
                 android:ems="10"
-                android:hint="លេខទូរស័ព្ទអាណាព្យាបាល"
-                android:inputType="text"
+                android:hint="@string/guardian_phone"
+                android:inputType="phone"
                 android:padding="10dp"
-                android:textColor="@color/color_app" />
+                android:textColor="@color/color_app"
+                android:contentDescription="@string/guardian_phone_description" />
 
             <Button
                 android:id="@+id/btn_next_pgi"
-                android:layout_width="120dp"
-                android:layout_height="60dp"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:backgroundTint="@color/color_app"
-                android:textColor="@color/white"
                 android:fontFamily="@font/kantumruy2"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:textSize="15dp"
-                android:text="បន្ទាប់" />
+                android:contentDescription="@string/next_button_description" />
 
         </LinearLayout>
     </ScrollView>
