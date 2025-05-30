@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major_options">
+        <item>Select Major</item>
+        <item>Supply Chain &amp; Automation Engineering</item>
+        <item>Information Technology Engineering </item>
+        <item>Bio Engineering</item>
+        <item>Telecommunication &amp; Electric Engineering </item>
+        <item>Environmental Engineering</item>
+    </string-array>
+</resources>
