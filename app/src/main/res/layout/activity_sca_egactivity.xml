@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SemesterAllDepartments.ScaEGActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/fe_logo"
+                android:contentDescription="@string/app_logo_description" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/fe"
+                android:fontFamily="@font/kantumruy2"
+                android:textColor="@color/color_app"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/eg"
+                android:textSize="30dp"
+                android:fontFamily="@font/roboto2"
+                android:textColor="@color/color_app"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/eg_text"
+                android:fontFamily="@font/kantumruy2"
+                android:textColor="@color/color_app"
+                android:textSize="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/img_eg" />
+
+            <Button
+                android:id="@+id/btn_next_sca_eg"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/color_app"
+                android:textSize="15dp"
+                />
+
+            <Button
+                android:id="@+id/btn_back_sca_eg"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/color_app"
+                android:textSize="15dp"
+                android:text="@string/back" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

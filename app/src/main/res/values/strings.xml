@@ -101,5 +101,15 @@
     <string name="select_major_description">ជ្រើសរើសមុខជំនាញសិក្សា</string>
     <string name="submit">ដាក់ស្នើ</string>
     <string name="submit_button_description">ប៊ូតុងដាក់ស្នើពាក្យ</string>
-
+    <string name="eg">Evaluation &amp; Graduation</string>
+    <string name="eg_text">Assessment of study will be performed at the end of each semester. Evaluation will be shown as the Grade Point Average (GPA) (4.00 scale) and the Cumulative Grade Point Average (4.00 scale).</string>
+    <string name="Bio_CC">The curriculum is designed education in the principles of Bio Engineering and also development of communication, teamwork, leadership and entrepreneurship skills.</string>
+    <string name="y1">Foundation</string>
+    <string name="y2">Second Year</string>
+    <string name="y3">Third Year</string>
+    <string name="y4">Fourth Year</string>
+    <string name="EE_cc">The curriculum for the Honor Bachelor Program is designed with the aim of educating fundamental and principal knowledge and skills in environmental engineering and developing capabilities of students related to communications, teamwork and leadership skills. It is based on four-year coursework, and students learn from professors and researchers, based in Cambodia and the Republic of Korea, about knowledge and skills which can be adopted to minimize human exposure to pollutants and waste and protect the environment from adverse/hazardous impacts. In particular, they have opportunities to know about approaches and techniques to be applied in the field of the environment including air/climate, water, soil/ecosystems and energy/resources.</string>
+    <string name="Tee_cc">The curriculum is designed education in the principles of TE Engineering and also development of communication, teamwork, leadership and entrepreneurship skills.</string>
+    <string name="Sca_cc">The curriculum is designed education in the principles of Automation &amp; Supply Chain Systems Engineering and also development of communication, teamwork, leadership and entrepreneurship skills.</string>
+    <string name="Ite_cc">The curriculum of Information Technology Engineering Department is designed for our students with abilities to use new technologies and theories to design and develop computer software.</string>
 </resources>

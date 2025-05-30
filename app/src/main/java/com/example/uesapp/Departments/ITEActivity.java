@@ -2,16 +2,21 @@ package com.example.uesapp.Departments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+
 import com.example.uesapp.FormRegisterStudy.SiActivity;
+import com.example.uesapp.MainActivity;
 import com.example.uesapp.R;
+import com.example.uesapp.SemesterAllDepartments.IteEGActivity;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -56,16 +61,35 @@ public class ITEActivity extends AppCompatActivity {
             textIntroduction.setText("Failed to load description.");
         }
 
-        // Find and set click listeners for back buttons and register button (unchanged)
+        // Find buttons and TextView
         ImageView btnBack = findViewById(R.id.btn_back_ite);
         TextView textBack = findViewById(R.id.textView11);
         Button btnRegister = findViewById(R.id.btn_register_std);
+        Button btnViewMore = findViewById(R.id.btn_view_more_ite);
 
-        btnBack.setOnClickListener(v -> finish());
-        textBack.setOnClickListener(v -> finish());
+        // Set click listener for back button ImageView
+        btnBack.setOnClickListener(v -> {
+            Intent intent = new Intent(ITEActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close ITEActivity to prevent stacking
+        });
 
+        // Set click listener for back TextView
+        textBack.setOnClickListener(v -> {
+            Intent intent = new Intent(ITEActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close ITEActivity to prevent stacking
+        });
+
+        // Set click listener for register button
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(ITEActivity.this, SiActivity.class);
+            startActivity(intent);
+        });
+
+        // Set click listener for view more button
+        btnViewMore.setOnClickListener(v -> {
+            Intent intent = new Intent(ITEActivity.this, IteEGActivity.class);
             startActivity(intent);
         });
     }

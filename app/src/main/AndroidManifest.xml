@@ -29,7 +29,108 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- Other activities should not have MAIN/LAUNCHER intent filters -->
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.BIO.BioY1Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.EE.EEY3Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.EE.EEY2Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.EE.EEY1Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.TEE.TeeY4Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.TEE.TeeY3Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.TEE.TeeY2Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.TEE.TeeY1Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.BIO.BioY4Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.BIO.BioY3Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.BIO.BioY2Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.EE.EEY4Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.SCA.ScaY4Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.SCA.ScaY3Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.SCA.ScaY2Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.SCA.ScaY1Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.ITE.IteY4Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SemesterAllDepartments.ITE.IteY3Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.ITE.IteY2Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.ITE.IteY1Activity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.ScaEGActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.BioEgActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.EEEgActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.IteEGActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SemesterAllDepartments.TeeEgActivity"
+            android:exported="true">
+        </activity>
+         <!-- Other activities should not have MAIN/LAUNCHER intent filters -->
         <activity
             android:name=".Departments.TEEActivity"
             android:exported="true" />
@@ -68,13 +169,10 @@
             android:exported="false" />
         <activity
             android:name=".View.ViewAlluseActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".View.ViewUserActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

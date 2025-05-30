@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SemesterAllDepartments.SCA.ScaY4Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="200dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/fe_logo"
+                android:contentDescription="@string/app_logo_description" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/fe"
+                android:fontFamily="@font/kantumruy2"
+                android:textColor="@color/color_app"
+                android:textStyle="bold"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="Curriculum"
+                android:textSize="30dp"
+                android:fontFamily="@font/roboto2"
+                android:textColor="@color/color_app"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="@string/Sca_cc"
+                android:fontFamily="@font/kantumruy2"
+                android:textColor="@color/color_app"
+                android:textSize="15dp"
+                />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:text="L = Lecture, P = Practice, S = Self Study"
+                android:textSize="15dp"
+                android:textColor="#cb4335"
+                android:fontFamily="@font/roboto2"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/y4"
+                android:textColor="@color/color_app"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto2"/>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/sca_y4s1" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/sca_y4s2" />
+            <Button
+                android:id="@+id/btn_next_sca_y4"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="@string/next"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/color_app"
+                android:textSize="15dp"
+                />
+
+            <Button
+                android:id="@+id/btn_back_sca_y4"
+                android:layout_width="350dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/color_app"
+                android:textSize="15dp"
+                android:text="@string/back" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

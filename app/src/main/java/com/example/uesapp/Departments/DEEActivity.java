@@ -13,7 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uesapp.FormRegisterStudy.SiActivity;
+import com.example.uesapp.MainActivity;
 import com.example.uesapp.R;
+import com.example.uesapp.SemesterAllDepartments.EEEgActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,7 +35,7 @@ public class DEEActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Fix: Declare as TextView instead of View
+        // Find the TextView for introduction
         TextView textIntroduction = findViewById(R.id.text_ee_introduction);
 
         // Example API response (replace with actual API call)
@@ -42,7 +44,7 @@ public class DEEActivity extends AppCompatActivity {
                 "  \"department\": {\n" +
                 "    \"id\": 7,\n" +
                 "    \"name\": \"Environmental Engineering\",\n" +
-                "    \"description\": \" The Department of Environmental Engineering offers a high-quality bachelor's program, supported by KOICA and GIST, to equip motivated students—especially in developing countries like Cambodia—with the knowledge, skills, and technologies needed to effectively assess and manage environmental problems caused by human activities, and to strengthen local capacity for sustainable environmental conservation.\"\n" +
+                "    \"description\": \"The Department of Environmental Engineering offers a high-quality bachelor's program, supported by KOICA and GIST, to equip motivated students—especially in developing countries like Cambodia—with the knowledge, skills, and technologies needed to effectively assess and manage environmental problems caused by human activities, and to strengthen local capacity for sustainable environmental conservation.\"\n" +
                 "  }\n" +
                 "}";
 
@@ -57,28 +59,41 @@ public class DEEActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
             textIntroduction.setText("Failed to load description.");
-        } // Fix: Added closing brace for try-catch block
+        }
 
         // Find the back button ImageView
         ImageView btnBack = findViewById(R.id.btn_back_ee);
         // Find the back TextView
         TextView textBack = findViewById(R.id.textView11);
-
+        // Find the register button
         Button btnRegister = findViewById(R.id.btn_register_std);
+        // Find the view more button
+        Button btnViewMore = findViewById(R.id.btn_view_more_EE);
 
         // Set click listener for back button ImageView
         btnBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(DEEActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close DEEActivity to prevent stacking
         });
 
         // Set click listener for back TextView
         textBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(DEEActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close DEEActivity to prevent stacking
         });
 
+        // Set click listener for register button
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(DEEActivity.this, SiActivity.class);
             startActivity(intent);
         });
-    } // Fix: Ensure closing brace for onCreate method
+
+        // Set click listener for view more button
+        btnViewMore.setOnClickListener(v -> {
+            Intent intent = new Intent(DEEActivity.this, EEEgActivity.class);
+            startActivity(intent);
+        });
+    }
 }

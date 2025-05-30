@@ -13,7 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uesapp.FormRegisterStudy.SiActivity;
+import com.example.uesapp.MainActivity;
 import com.example.uesapp.R;
+import com.example.uesapp.SemesterAllDepartments.ScaEGActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,7 +35,7 @@ public class SCAActivity extends AppCompatActivity {
             return insets;
         });
 
-
+        // Find the TextView
         TextView textIntroduction = findViewById(R.id.text_sca_introduction);
 
         // Example API response (replace with actual API call)
@@ -57,27 +59,37 @@ public class SCAActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
             textIntroduction.setText("Failed to load description.");
-        } // Fix: Added closing brace for try-catch block
+        }
 
-        // Find the back button ImageView
+        // Find buttons and TextView
         ImageView btnBack = findViewById(R.id.btn_back_sca);
-        // Find the back TextView
         TextView textBack = findViewById(R.id.textView11);
-
         Button btnRegister = findViewById(R.id.btn_register_std);
+        Button btnViewMore = findViewById(R.id.btn_view_more_sca);
 
         // Set click listener for back button ImageView
         btnBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(SCAActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close SCAActivity to prevent stacking
         });
 
         // Set click listener for back TextView
         textBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(SCAActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Close SCAActivity to prevent stacking
         });
 
+        // Set click listener for register button
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(SCAActivity.this, SiActivity.class);
+            startActivity(intent);
+        });
+
+        // Set click listener for view more button
+        btnViewMore.setOnClickListener(v -> {
+            Intent intent = new Intent(SCAActivity.this, ScaEGActivity.class);
             startActivity(intent);
         });
     }

@@ -89,7 +89,7 @@
                 />
 
             <Button
-                android:id="@+id/btn_view_more"
+                android:id="@+id/btn_view_more_ite"
                 android:layout_width="350dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"

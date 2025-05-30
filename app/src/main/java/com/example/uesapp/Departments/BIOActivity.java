@@ -13,7 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uesapp.FormRegisterStudy.SiActivity;
+import com.example.uesapp.MainActivity;
 import com.example.uesapp.R;
+import com.example.uesapp.SemesterAllDepartments.BioEgActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -63,21 +65,34 @@ public class BIOActivity extends AppCompatActivity {
         ImageView btnBack = findViewById(R.id.btn_back_bio);
         // Find the back TextView
         TextView textBack = findViewById(R.id.textView11);
-
+        // Find the register button
         Button btnRegister = findViewById(R.id.btn_register_std);
+        // Find the view more button
+        Button btnViewMore = findViewById(R.id.btn_view_more_bio);
 
         // Set click listener for back button ImageView
         btnBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(BIOActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Optional: Close BIOActivity to prevent stacking
         });
 
         // Set click listener for back TextView
         textBack.setOnClickListener(v -> {
-            finish(); // Closes the current activity and returns to the previous screen
+            Intent intent = new Intent(BIOActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish(); // Optional: Close BIOActivity to prevent stacking
         });
 
+        // Set click listener for register button
         btnRegister.setOnClickListener(v -> {
             Intent intent = new Intent(BIOActivity.this, SiActivity.class);
+            startActivity(intent);
+        });
+
+        // Set click listener for view more button
+        btnViewMore.setOnClickListener(v -> {
+            Intent intent = new Intent(BIOActivity.this, BioEgActivity.class);
             startActivity(intent);
         });
     }
