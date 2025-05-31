@@ -59,9 +59,9 @@ public class ViewUserActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                 } else {
                     try {
-                        String error = response.errorBody() != null ? response.errorBody().string() : "Unknown error";
-                        Toast.makeText(ViewUserActivity.this, "Failed to load registrations: " + error, Toast.LENGTH_SHORT).show();
-                        Log.e("API Error", "Unsuccessful response: " + error);
+                        String errorBody = response.errorBody() != null ? response.errorBody().string() : "No error body";
+                        Log.e("API Error", "Unsuccessful response: Code " + response.code() + " - " + errorBody);
+                        Toast.makeText(ViewUserActivity.this, "Failed to load registrations: " + response.message(), Toast.LENGTH_SHORT).show();
                     } catch (Exception e) {
                         Log.e("API Error", "Error reading response: " + e.getMessage(), e);
                     }
@@ -70,8 +70,8 @@ public class ViewUserActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<List<RegistrationResponse>> call, Throwable t) {
+                Log.e("API Error", "Failure: " + t.getMessage() + "\nStacktrace: ", t);
                 Toast.makeText(ViewUserActivity.this, "Failed to load registrations: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-                Log.e("API Error", "Failure: " + t.getMessage(), t);
             }
         });
     }

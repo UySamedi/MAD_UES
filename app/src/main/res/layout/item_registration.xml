@@ -36,4 +36,13 @@
         android:fontFamily="@font/kantumruy2"
         android:textColor="@android:color/darker_gray" />
 
+    <TextView
+        android:id="@+id/departmentTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Department"
+        android:textSize="16sp"
+        android:fontFamily="@font/kantumruy2"
+        android:textColor="@android:color/darker_gray" />
+
 </LinearLayout>

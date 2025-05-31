@@ -31,8 +31,9 @@ public class RegistrationAdapter extends RecyclerView.Adapter<RegistrationAdapte
         if (registration != null) {
             // Personal details
             if (registration.getPersonalDetail() != null) {
-                String fullName = registration.getPersonalDetail().getFirstname() + " " + registration.getPersonalDetail().getLastname();
-                holder.nameTextView.setText(fullName);
+                String fullName = (registration.getPersonalDetail().getFirstname() != null ? registration.getPersonalDetail().getFirstname() : "")
+                        + " " + (registration.getPersonalDetail().getLastname() != null ? registration.getPersonalDetail().getLastname() : "");
+                holder.nameTextView.setText(fullName.trim().isEmpty() ? "N/A" : fullName.trim());
                 String phone = registration.getPersonalDetail().getPhone() != null ? registration.getPersonalDetail().getPhone() : "N/A";
                 holder.phoneTextView.setText("Phone: " + phone);
             } else {
@@ -42,10 +43,19 @@ public class RegistrationAdapter extends RecyclerView.Adapter<RegistrationAdapte
 
             // Education details
             if (registration.getEducationDetail() != null) {
-                String education = registration.getEducationDetail().getEducationName() + " (" + registration.getEducationDetail().getEducationGrade() + ")";
-                holder.educationTextView.setText("Education: " + education);
+                String education = (registration.getEducationDetail().getEducationName() != null ? registration.getEducationDetail().getEducationName() : "")
+                        + " (" + (registration.getEducationDetail().getEducationGrade() != null ? registration.getEducationDetail().getEducationGrade() : "") + ")";
+                holder.educationTextView.setText("Education: " + (education.trim().isEmpty() ? "N/A" : education.trim()));
             } else {
                 holder.educationTextView.setText("Education: N/A");
+            }
+
+            // Department details
+            if (registration.getDepartment() != null) {
+                String department = registration.getDepartment().getName() != null ? registration.getDepartment().getName() : "N/A";
+                holder.departmentTextView.setText("Department: " + department);
+            } else {
+                holder.departmentTextView.setText("Department: N/A");
             }
         }
     }
@@ -56,13 +66,14 @@ public class RegistrationAdapter extends RecyclerView.Adapter<RegistrationAdapte
     }
 
     public static class RegistrationViewHolder extends RecyclerView.ViewHolder {
-        TextView nameTextView, phoneTextView, educationTextView;
+        TextView nameTextView, phoneTextView, educationTextView, departmentTextView;
 
         public RegistrationViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
             phoneTextView = itemView.findViewById(R.id.phoneTextView);
             educationTextView = itemView.findViewById(R.id.educationTextView);
+            departmentTextView = itemView.findViewById(R.id.departmentTextView);
         }
     }
 }
